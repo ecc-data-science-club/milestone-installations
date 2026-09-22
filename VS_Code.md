@@ -1,4 +1,5 @@
 
+<!-- for git, Github, and terminal information for VS Code -->
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
