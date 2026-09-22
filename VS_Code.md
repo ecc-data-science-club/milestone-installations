@@ -1,13 +1,35 @@
-# Git version control and other terminal installations for VS Code
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#**Git-version-control-Github-and-other-terminal-installations-for-VS-Code**
+">Git version control, Github, and other terminal installations for VS Code</a>
+      <ul>
+         <li><a href="#What-is-version-control-and-why-is-it-important?">What is version control and why is it important?</a></li>
+         <li><a href="#What-is-GitHub-and-why-is-it-important?">What is GitHub and why is it important?</a></li>
+        <li><a href="#Mac-Terminal-Installation">Mac Terminal Installation</a></li>
+        <li><a href="#Windows-Terminal-Installation">Windows Terminal Installation</a></li>
+        <li><a href="#Useful-General-Computer-Commands">Useful General Computer commands</a></li>
+        <li><a href="#Common-Terminal-Commands">Common Terminal Commands</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+
+
+# **Git version control, Github, and other terminal installations for VS Code**
 
 Mac uses a Unix-based shell environment, bash and zsh, and Windows uses a native environment called Command Prompt or PowerShell.
-
 
 ## What is version control and why is it important?
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It can be used to track changes, revert to a version before a bug developed and see who last edited a block of code. 
 
 Git is a version control system that works with Visual Studio Code and uses the terminal to run those commands. 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## What is GitHub and why is it important?
 GitHub is a cloud-based hosting service for Git repositories. While Git is the local tool that tracks your code history on your machine, GitHub lets you store that history remotely, collaborate with others, share projects, and back up your work.
@@ -15,14 +37,20 @@ GitHub is a cloud-based hosting service for Git repositories. While Git is the l
 For the moment, unless you want to create your own website, GitHub is the best way to host your portfolio projects. It also makes it very easy for people to be able to clone and test your code themselves. 
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Mac Terminal Installation
 Preferred web browser for web development is Google Chrome for its debugging tools, but using any web browser is fine. 
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Locate Terminal
 
 Use Spotlight (magnifying glass icon) in the upper right hand corner and search for 'Terminal', or search for 'Terminal' in Apps. 
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Homebrew 
 
@@ -35,6 +63,8 @@ Verify your installation with this command:
 ```sh
 brew --version
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Visual Studio Code installation
 
@@ -62,6 +92,8 @@ If running 'code' in the terminal gives an error, verify that the code CLI was p
 ```sh
 code --version
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install Git
 
@@ -91,7 +123,7 @@ git config --global user.email johndoe@example.com
 
 <!-- Insert vscode-extension image here  -->
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Useful Javascript Installations
 
@@ -147,6 +179,7 @@ nvm install --lts
 nvm ls
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Windows Terminal Installation
 
@@ -154,6 +187,7 @@ nvm ls
 ### Windows Terminal
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install Visual Studio Code
 
@@ -167,7 +201,7 @@ nvm ls
 code
 ```
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install Git
 
@@ -191,10 +225,7 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-
-
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Useful General Computer commands
 
@@ -215,6 +246,8 @@ git config --global user.email johndoe@example.com
 
 Tip: Be careful not to use ctrl+C inside a terminal because it will cancel the running command.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Common Terminal Commands
 
 ### Key Commands & Navigation
@@ -229,6 +262,7 @@ Before we look at some common commands, I just want to note a few keyboard comma
 - `Ctrl + R`: Will search for a command
 - `Ctrl + D`: Will exit the terminal
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### File System Navigation
 
@@ -248,6 +282,7 @@ Commands to navigate your file system are very important. You will be using them
 | cd -                                | Change to previous directory (which could be different than the parent of course) |
 | find [dirtosearch] -name [filename] | Find location of a file                                                           |
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Shortcuts for editing in files
 | Command                     | Windows                      | Mac
@@ -256,6 +291,7 @@ Commands to navigate your file system are very important. You will be using them
 | indent/tab                  | tab                          | tab                  |
 | back indent/back tab        | shift+tab                    | shift+tab            |
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Opening a Folder or File
 
@@ -265,6 +301,7 @@ Mac - `open [dirname]`
 Windows - `start [dirname]`
 Linux - `xdg-open [dirname]`
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Modifying Files & Directories
 
@@ -282,8 +319,7 @@ Linux - `xdg-open [dirname]`
 | mv [filename] [filename]    | Rename file or folder                               |
 | mv [filename] [filename] -v | Rename Verbose - print source/destination directory |
 
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### The `echo` Command
 
@@ -304,6 +340,8 @@ You can also append to a file:
 ```bash
   echo "Hello World" >> [filename]
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### The `head` and `tail` Commands
 
@@ -331,8 +369,7 @@ You can also specify the number of lines to output:
   tail -n 5 [filename]
 ```
 
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### The `find` command
 
@@ -349,3 +386,5 @@ Let's find the file called `file-001.txt`:
   find . -name "file-001.txt"
 ```
 This will look in the current directory, which is represented with a dot.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
