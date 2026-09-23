@@ -8,3 +8,10 @@ This is a compilation of instructions for:
 5. Installing languages to VS Code (like JavaScript and Python)
 
 Navigate to the Appropriate .md for the relevant information.
+
+
+To Do:
+Write Anaconda instructions
+Write Github instructions
+Test terminal and vs_code instructions work
+
