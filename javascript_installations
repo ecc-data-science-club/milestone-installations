@@ -1,0 +1,144 @@
+## Terminal Installations for using JavaScript
+
+## Mac
+
+### Useful Javascript Installations
+
+Important! Skip these installations if you are not running Javascript.
+
+
+#### Node.js/npm or node manager/nvm
+
+Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. It runs JavaScript outside a web browser and is what allows you to make installations with the 'npm' command. 'npm' is included with Node.js and installs JavaScript packages.
+
+Note: the Mac `nvm` tool is **not** cross-compatible with Windows.
+
+Install here: [Node.js](https://nodejs.org/en/download)
+
+<!-- insert iamge here -->
+
+Verify your installation with these two commands: 
+
+```sh
+node -v
+npm -v
+```
+
+nvm lets you install and switch between Node.js versions. It can be useful when different projects require different versions and is often preferred for it's greater stability. 
+
+- Install here: [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Run the installation and then restart your terminal.
+- Install the latest version:
+
+```sh
+nvm install --lts
+```
+<!-- insert image here -->
+
+- Verify your installation by checking if the file is there: 
+
+```sh
+nvm ls
+```
+
+#### Yarn (optional)
+
+Yarn is an alternative package manager for Javascript packages.
+
+Install here: [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+
+Use brew to download yarn classic: 
+
+```sh
+brew install yarn
+```
+
+<!-- insert image here -->
+
+check your installation with command:
+
+```sh
+yarn --version
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Windows
+
+
+
+### Useful JavaScript Installations
+
+Important! Skip these installations if you are not running JavaScript.
+
+#### Node.js/npm or node manager/nvm
+
+Install here: [Node.js](https://nodejs.org/en/download)
+
+Or via winget:
+
+```sh
+winget install OpenJS.NodeJS.LTS
+```
+
+Verify your installation with these two commands:
+
+```sh
+node -v
+npm -v
+```
+
+Note: the Mac `nvm` tool is **not** cross-compatible with Windows. Windows users should use **nvm-windows** instead, a separate project with the same purpose.
+
+Install here: [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades)
+
+Run the installer, then restart your terminal.
+
+Install the latest LTS version:
+
+```sh
+nvm install lts
+nvm use lts
+```
+
+Verify your installation:
+
+```sh
+nvm ls
+```
+
+#### Yarn (optional)
+
+```sh
+npm install --global yarn
+```
+
+Check your installation:
+
+```sh
+yarn --version
+```
+
+#### Node version manager for Windows / nvm-windows (optional)
+
+Note: the Mac `nvm` tool is **not** cross-compatible with Windows. Windows users should use **nvm-windows** instead, a separate project with the same purpose.
+
+Install here: [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades)
+
+Run the installer, then restart your terminal.
+
+Install the latest LTS version:
+
+```sh
+nvm install lts
+nvm use lts
+```
+
+Verify your installation:
+
+```sh
+nvm ls
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
