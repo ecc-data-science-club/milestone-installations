@@ -4,7 +4,9 @@
 
 # Anaconda for Data Science
 
-Anaconda is a Python distribution. It installs Python along with `conda`, a tool for installing packages and keeping each project's packages in separate environments. It also includes many data science libraries, plus Jupyter and Anaconda Navigator (a point-and-click launcher).
+Anaconda is a python package ('distribution') that includes the data science libraries and the Python programming language and interpreter, but does not have a built-in IDE. Instead, it supports IDEs like Jupyter Notebook/JupyterLab, VS Code, and spyder.
+
+It installs Python along with `conda`, a tool for installing packages and keeping each project's packages in separate environments.
 
 This guide assumes you have completed `terminal_installations.md`. There are **Mac** and **Windows** sections for OS specific instructions and shared sections.
 
