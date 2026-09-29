@@ -1,5 +1,5 @@
 <!-- for writing git and terminal instructions for anaconda -->
-
+<!-- does this have a git /github setup -->
 <a id="readme-top"></a>
 
 # Anaconda for Data Science

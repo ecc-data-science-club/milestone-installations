@@ -37,7 +37,7 @@ There are **Mac** and **Windows** sections for OS specific instructions and shar
 
 Git tracks your project's history on your own computer (the **local repository**). GitHub stores a copy online (the **remote repository**, usually named `origin`). On top of that it adds:
 
-- **Backup and sharing:** your lives in the cloud. You can collaborate with other people and share code easily.
+- **Backup and sharing:** your project lives in the cloud. You can collaborate with other people and share code easily.
 - **Pull requests:** a way to propose, review, and discuss changes before merging them.
 - **Issues:** to-do lists and bug reports for a project.
 - **GitHub Pages:** free hosting for simple websites.
@@ -51,11 +51,10 @@ You may have done step 1 in `vs_code_installations.md` but this will be where yo
 
 1. Sign up at [github.com](https://github.com/). Use a professional username, preferably as close to your real name as possible since it appears in your profile URL and your repository links.
 2. Turn on two-factor authentication (2FA). In GitHub, open **Settings**, find the **Password and authentication** page, and set up 2FA with an authenticator app or passkey. GitHub requires 2FA for people who contribute code.
-3. [Optional] Protect your email address. Under **Settings → Emails**, check **Keep my email addresses private** and **Block command line pushes that expose my email**. Then use the no-reply address shown on that page as your Git `user.email` (see the VS Code and Git guide).
+3. [Optional] Protect your email address. Under **Settings → Emails**, check **Keep my email addresses private** and **Block command line pushes that expose my email**. Then use the no-reply address shown on that page as your Git `user.email`.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ## Authenticate with GitHub
@@ -136,21 +135,23 @@ Git for Windows also includes **Git Credential Manager**. If you skip `gh`, your
 
 ## Everyday workflow commands
 
+All of these commands are done in the terminal.
+
 ```sh
-git pull                              # get the latest changes first
-# ...edit your files...
+git init                              # initializes the repository to Git
+git pull origin main                  # get the latest changes first (can also be done after commiting before pushing)
+git switch branch-name                # switch to branch that you are editing
 git status                            # see what changed
-git add .                             # stage your changes
-git commit -m "Add data cleaning script"
-git push                              # upload to GitHub
+git add .                             # stage all your changes
+git add filename                      # stage specific files to commit
+git commit -m "Add data cleaning script" # commit your changes to be ready to push to the remote reposity
+git push origin branch-name           # upload to GitHub
 ```
 
 Tips for good commits:
 - Commit small, related changes often rather than one giant commit.
-- Write messages that finish the sentence "This commit will..." (for example, "Add missing-value handling").
-- Run `git status` before `git add .` so you know what you're staging.
-
-You can do the same steps from the **Source Control** icon in VS Code's left sidebar, or with the GitHub Desktop app.
+- Write a good pull request inside GitHub with detail and visuals. 
+- Run `git status` before `git add` so you know what you're staging.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,15 +164,15 @@ A **branch** is a separate line of work, so you can experiment without touching 
 ```sh
    git switch main
    git pull
-   git switch -c add-visualizations
+   git switch -c branch-name
 ```
 
 2. Make changes, then commit and push the branch:
 
 ```sh
    git add .
-   git commit -m "Add revenue charts"
-   git push -u origin add-visualizations
+   git commit -m "Message that becomes the Pull Request Title"
+   git push -u origin branch-name
 ```
 
 3. Open a pull request, either with the CLI or by clicking **Compare & pull request** on the repository page:
@@ -180,17 +181,21 @@ A **branch** is a separate line of work, so you can experiment without touching 
    gh pr create --fill
 ```
 
-4. Review the changes on the **Files changed** tab. When you're happy, click **Merge pull request**, then **Delete branch**.
+Make sure that your pull request is detailed, clear, and with organization. 
 
-5. Update your local copy and clean up:
+
+4. Review the changes on the **Files changed** tab. You can also perform a **Code Review** where you go over their native code and Copilot suggestions. When you're happy, click **Merge pull request**.
+
+5. Update your local copy and merge branches
 
 ```sh
    git switch main
-   git pull
-   git branch -d add-visualizations
+   git pull origin main
+   git switch branch-name
+   git merge main branch-name
 ```
 
-On solo projects you can commit directly to `main`, but branches and PRs are good practice for teams and show good habits in a portfolio.
+On solo projects you can commit directly to `main`, but branches and PRs are good practice for teams and show good habits in a portfolio. By also using branches and commits, you are less likely to make mistakes. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,6 +230,8 @@ __pycache__/
 Thumbs.db
 ```
 
+Anything listed in the `.gitignore` file is ignored by GitHub, which is great for protecting data like API keys, foreign keys, and sensitive passwords. In fact, you can't even make commits if a foreign key is not properly ignored. But it is a pain to fix if you accidentally attempt to push a foreign key. 
+
 
 ## Build your portfolio
 
@@ -234,8 +241,6 @@ Thumbs.db
 - The data source
 - How to run it (the environment setup steps)
 - The tools and libraries you used
-
-**Create a profile README.** Make a public repository named exactly the same as your GitHub username and add a `README.md`. Its contents appear at the top of your profile page. Use it for a short introduction and links.
 
 **Pin your best repositories.** On your profile, click **Customize your pins** and choose up to six.
 
@@ -253,7 +258,7 @@ git commit --amend -m "Better message"   # fix your last commit (before pushing)
 git revert COMMIT-ID                     # undo a pushed commit safely
 ```
 
-`git reset --hard` discards **all** uncommitted changes permanently, and `git push --force` can overwrite other people's work. Avoid both unless you're sure what they do.
+`git reset --hard` discards **all** uncommitted changes permanently, and `git push --force` can overwrite other people's work. Avoid both unless you're sure what they do. Very useful if you accidentally commit a foreign key or something else that is now stuck in your commit history. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
