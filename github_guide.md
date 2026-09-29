@@ -175,7 +175,9 @@ A **branch** is a separate line of work, so you can experiment without touching 
    git push -u origin branch-name
 ```
 
-3. Open a pull request, either with the CLI or by clicking **Compare & pull request** on the repository page:
+3. Open a pull request, by clicking **Compare & pull request** on the repository page
+
+Optionally, you can also do it the CLI in the terminal, but I don't suggest doing so. 
 
 ```sh
    gh pr create --fill
