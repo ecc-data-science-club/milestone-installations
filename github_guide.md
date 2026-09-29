@@ -281,6 +281,13 @@ To resolve it:
 
 To avoid most conflicts, run `git pull` before you start working and commit often.
 
+You may also at some point need to commit changes before switching to a main branch and pulling. When you then merge the main into the branch, the terminal may switch to a Vim text editor. It wants you to create a merge commit message. The merge message is already filled in, so you can accept it:
+
+Press Esc (to make sure you're in command mode).
+Type :wq and press Enter (write the file and quit).
+
+If you want to edit the message first, press i to start typing, then Esc, then :wq.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Common commands
