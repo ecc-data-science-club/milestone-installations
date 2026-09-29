@@ -55,7 +55,21 @@ brew --version
 
 ### Windows Terminal
 
-Use the Windows key to search for either the built-in 'Command Prompt' or 'PowerShell.' PowerShell has more modern features while Command Prompt is simpler for basic commands and often is easier to debug.
+Use the Windows key to search for 'Terminal' (Windows 11) or 'PowerShell' (Windows 10). This guide uses **PowerShell** for all Windows commands. Command Prompt uses different commands, so it isn't covered here.
+
+PowerShell has more modern features while Command Prompt is simpler for basic commands and often is easier to debug.
+
+If Windows Terminal isn't installed (common on Windows 10), install it:
+
+```powershell
+winget install Microsoft.WindowsTerminal
+```
+
+To see which PowerShell version you have:
+
+```powershell
+$PSVersionTable.PSVersion
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,16 +90,16 @@ winget --version
 
 From here, go to the next installation guide depending on what type of coding you want to do.
 
-1. Anaconda is a python package ('distribution') that includes the data science libraries and the Python programming language and interpreter, but does not include an IDE. Instead, it supports IDEs like Jupyter Notebook/JupyterLab, VS Code, and spyder. 
+1. Anaconda is a python package ('distribution') that includes the data science libraries and the Python programming language and interpreter, but does not have a built-in IDE. Instead, it supports IDEs like Jupyter Notebook/JupyterLab, VS Code, and spyder. 
 - Python specific.
 - Must be run with a 3rd party IDE. i recommend Jupyter Notebook or VS Code.
 2. Visual Studio Code is the Microsoft code editor that works with many different languages with extensions and installations. In other words, it is not an IDE, but mimics one with extensions. 
 - Works with the most languages and designed for web development. Also does Data Science well and is a lightweight version of Visual Studio.
-- Supports Microsoft, MacOS, and Linux.
+- Supports Windows, MacOS, and Linux.
 - Programming languages: Python, JavaScript, C, C++, C#, Go, Dart, R, Rust, Swift, TypeScript, Java, HTML, and more.
 3. Visual Studio (Microsoft compatible only) is the Microsoft IDE which means it has the most robust compiler and diagnostic tools.
 - Can handle intense and large apps, including unity game development. 
-- Only supported on Microsoft.
+- Only supported on Windows.
 
 
 ## Useful General Computer commands
@@ -128,20 +142,22 @@ Before we look at some common commands, I just want to note a few keyboard comma
 ### File System Navigation
 
 Commands to navigate your file system are very important. You will be using them all the time. You won't remember every single command that you use, but these are the ones that you should remember.
+## File System Navigation
 
-| Command                             | Description                                                                       |
-| ----------------------------------- | --------------------------------------------------------------------------------- |
-| pwd                                 | Lists the path to the working directory                                           |
-| ls                                  | List directory contents                                                           |
-| ls -a                               | List contents including hidden files (Files that begin with a dot)                |
-| ls -l                               | List contents with more info including permissions (long listing)                 |
-| ls -r                               | List contents reverse order                                                       |
-| cd                                  | Change directory to home                                                          |
-| cd [dirname]                        | Change directory to specific directory                                            |
-| cd ~                                | Change to home directory                                                          |
-| cd ..                               | Change to parent directory                                                        |
-| cd -                                | Change to previous directory (which could be different than the parent of course) |
-| find [dirtosearch] -name [filename] | Find location of a file                                                           |
+| Task                        | Mac/Linux                           | Windows (PowerShell)                              |
+| --------------------------- | ----------------------------------- | ------------------------------------------------- |
+| Show working directory      | `pwd`                               | `pwd`                                             |
+| List directory contents     | `ls`                                | `ls`                                              |
+| List including hidden files | `ls -a`                             | `ls -Force`                                       |
+| List with more info         | `ls -l`                             | `ls` (already shows dates and sizes)              |
+| List in reverse order       | `ls -r`                             | `ls \| Sort-Object Name -Descending`              |
+| Change to home directory    | `cd`                                | `cd ~`                                            |
+| Change to a directory       | `cd [dirname]`                      | `cd [dirname]`                                    |
+| Change to home directory    | `cd ~`                              | `cd ~`                                            |
+| Change to parent directory  | `cd ..`                             | `cd ..`                                           |
+| Change to previous directory| `cd -`                              | `cd -` (PowerShell 7 only)                        |
+| Find a file                 | `find [dirtosearch] -name [filename]` | `ls [dirtosearch] -Recurse -Filter [filename]`  |
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,86 +181,19 @@ Linux - `xdg-open [dirname]`
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Modifying Files & Directories
-
-| Mac Command                 | Description                                         |
-| --------------------------- | --------------------------------------------------- |
-| mkdir [dirname]             | Make directory                                      |
-| touch [filename]            | Create file                                         |
-| rm [filename]               | Remove file                                         |
-| rm -i [filename]            | Remove a file, but ask before                       |
-| rm -r [dirname]             | Remove directory                                    |
-| rm ./\*                     | Remove non-hidden items in the current folder       |
-| cp [filename] [dirname]     | Copy file                                           |
-| mv [filename] [dirname]     | Move file                                           |
-| mv [dirname] [dirname]      | Move directory                                      |
-| mv [filename] [filename]    | Rename file or folder                               |
-| mv [filename] [filename] -v | Rename Verbose - print source/destination directory |
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### The `echo` Command
-
-The `echo` command is used to display messages, or to create and write to files. It is similar to the `cat` command, but it is used to display a single line of text.
-
-```bash
-  echo "Hello World"
-```
-
-You can also use it to create a file:
-
-```bash
-  echo "Hello World" > [filename]
-```
-
-You can also append to a file:
-
-```bash
-  echo "Hello World" >> [filename]
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### The `head` and `tail` Commands
-
-The `head` command is used to output the first part of files. By default, it outputs the first 10 lines of each file. You can also specify the number of lines to output.
-
-```bash
-  head [filename]
-```
-
-You can also specify the number of lines to output:
-
-```bash
-  head -n 5 [filename]
-```
-
-The `tail` command is used to output the last part of files. By default, it outputs the last 10 lines of each file. You can also specify the number of lines to output.
-
-```bash
-  tail [filename]
-```
-
-You can also specify the number of lines to output:
-
-```bash
-  tail -n 5 [filename]
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### The `find` command
-
-The `find` command is extremely powerful and is used to find the location of files and directories based on conditions that you specify.
-
-```bash
-  find [dirname] -name [filename]
-```
-
-Let's find the file called `file-001.txt`:
-
-```bash
-  find . -name "file-001.txt"
-```
-This will look in the current directory, which is represented with a dot.
+| Task                        | Mac/Linux                    | Windows (PowerShell)                          |
+| --------------------------- | ---------------------------- | --------------------------------------------- |
+| Make directory              | `mkdir [dirname]`            | `mkdir [dirname]`                             |
+| Create file                 | `touch [filename]`           | `New-Item [filename]`                         |
+| Remove file                 | `rm [filename]`              | `rm [filename]`                               |
+| Remove file, ask first      | `rm -i [filename]`           | `rm [filename] -Confirm`                      |
+| Remove directory            | `rm -r [dirname]`            | `rm -Recurse [dirname]`                       |
+| Remove non-hidden items in the current folder | `rm ./*`   | `rm .\*`                                      |
+| Copy file                   | `cp [filename] [dirname]`    | `cp [filename] [dirname]`                     |
+| Copy directory              | `cp -r [dirname] [newname]`  | `cp -Recurse [dirname] [newname]`             |
+| Move file                   | `mv [filename] [dirname]`    | `mv [filename] [dirname]`                     |
+| Move directory              | `mv [dirname] [dirname]`     | `mv [dirname] [dirname]`                      |
+| Rename file or folder       | `mv [filename] [filename]`   | `mv [filename] [filename]`                    |
+| Rename, print what happened | `mv -v [old] [new]`          | `mv [old] [new] -Verbose`                     |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -7,22 +7,31 @@ This guide assumes that you have done the installations from terminal_installati
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#Visual-Studio-Code-And-Git">Visual Studio Code</a>
+    <li><a href="#install-vs-code">Install VS Code</a>
       <ul>
-        <li><a href="#Mac-Installation">Mac Installation</a></li>
-        <li><a href="#Windows-Installation">Windows Installation</a></li>
-        <li><a href="#Git-Version-Control-and-GitHub">Git Version Control and GitHub </a></li>
-        <ul>
-         <li><a href="#Mac-Git-Installation">Mac Git Installation </a></li>
-         <li><a href="#Windows-Git-Installation">Windows Git Installation </a></li>
-         </ul>
+        <li><a href="#mac">Mac</a></li>
+        <li><a href="#windows">Windows</a></li>
+      </ul>
+    </li>
+    <li><a href="#git-and-github">Git and GitHub</a>
+      <ul>
+        <li><a href="#what-is-version-control">What is version control?</a></li>
+        <li><a href="#what-is-github">What is GitHub?</a></li>
+        <li><a href="#install-git">Install Git</a></li>
+        <li><a href="#configure-git">Configure Git</a></li>
+        <li><a href="#connect-to-github">Connect to GitHub</a></li>
+        <li><a href="#create-and-push-your-first-repository">Create and push your first repository</a></li>
+        <li><a href="#everyday-git-commands">Everyday Git commands</a></li>
       </ul>
     </li>
   </ol>
 </details>
 
-## Mac Installation
+
+## Install VS Code
+
+
+### Mac Installation
 
 1. Install with homebrew:
 
@@ -30,84 +39,120 @@ This guide assumes that you have done the installations from terminal_installati
 brew install --cask visual-studio-code
 ```
 
-or install manually from here: [VS Code](https://code.visualstudio.com/)
+or download it manually from here: [VS Code](https://code.visualstudio.com/)
 <!-- insert image here -->
-2. Open VS Code:
+
+2. Open VS Code from your Applications folder
+
+
+3. Install the 'code' CLI command so you can launch VS Code from the terminal:
+- Open the Command Palette with 'Cmd+Shift+P'
+- Type 'Shell Command: Install 'code' command in PATH' and press 'enter'
+
+4. Restart your terminal and verify the installation:
 
 ```sh
-code
-```
-
-3. Shell command for code CLI command
-
-If running 'code' in the terminal gives an error, verify that the code CLI was properly installed. 
-
-- Open the Command Palette by pressing Cmd + Shift + P (Mac) or Ctrl + Shift + P (Windows), or typing '>' in the text input on the top.
-- Type Shell Command: Install 'code' command in PATH and press Enter.
-- Verify the installation with this command:
-
-```sh
-code --version
+   code --version
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Windows Installation
+### Windows Installation
 
-1. install with winget:
+1. install with winget
+
+Type in your terminal: 
+
 ```sh
 winget install Microsoft.VisualStudioCode
 ```
 
-Or install manually from here: [VS Code](https://code.visualstudio.com/download)
+Or download it manually from here: [VS Code](https://code.visualstudio.com/download)
 
 <!-- insert image here -->
 
-2. Open VS Code:
+2. Open a new terminal and verify the installation:
 
 ```sh
-code
+   code --version
 ```
+
+This installer adds 'code' by default.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Git Version Control and GitHub 
 
-### About Git and GitHub 
 
-#### What is version control and why is it important?
+### What is version control and why is it important?
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It can be used to track changes, revert to a version before a bug developed and see who last edited a block of code. 
 
 Git is a version control system that works with [Visual Studio Code](https://code.visualstudio.com/) and [Anaconda](https://www.anaconda.com/download) and uses the terminal to run those commands. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### What is GitHub and why is it important?
+### What is GitHub and why is it important?
 GitHub is a cloud-based hosting service for Git repositories. While Git is the local tool that tracks your code history on your machine, GitHub lets you store that history remotely, collaborate with others, share projects, and back up your work.
 
 For the moment, unless you want to create your own website, GitHub is the best way to host your portfolio projects. It also makes it very easy for people to be able to clone and test your code themselves. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Mac Git Installation
+## Install Git
+
+First, create a free account at [github.com](https://github.com/).
+
+### Mac Installation
 
 For any application you open and edit on your computer, that is a local file. Any application that is stored on your GitHub account is your remote copy. 
 
-To push your local version to your remote copy or make changes to the remote copy, you need to have a connection from your terminal to your GitHub account. 
+To push your local repository to your remote repository or make changes to the remote copy, you need to have a connection from your terminal to your GitHub account. 
+
+On the bottom left corner of VS Code is your Account that can manage extensions. Let's connect your VS Code to GitHub and add version control. 
+
+1. Install Git with brew
+
+Type into the terminal:
+
+```sh
+brew install git
+```
+
+Or download it here: [git](https://git-scm.com/install/mac)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Windows Git Installation
+
+For any application you open and edit on your computer, that is a local file. Any application that is stored on your GitHub account is your remote copy. 
+
+To push your local repository to your remote repository or make changes to the remote copy, you need to have a connection from your terminal to your GitHub account. 
 
 On the bottom left corner of VS Code is a profile that can manage extensions. Let's connect your VS Code to GitHub and add version control. 
 
-1. Create a GitHub account
+1. Install git with winget
 
-2. Download git to your computer. 
+Type into the terminal:
 
-Install here: [git](https://git-scm.com/install/mac)
+```sh
+winget install Git.Git
+```
 
-3. Open VS Code and sign in to your GitHub account in 'Source Control' on the left vertical navigation bar.
+Or download it here: [git](https://git-scm.com/install/windows)
 
-4. Set your configuration to identify the user in commits:
+Restart your terminal.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### configure Git
+
+1. Set your configuration to identify the user in commits:
 
 ```sh
 git config --global user.name "John Doe"
@@ -118,37 +163,28 @@ git config --global user.email johndoe@example.com
 
 <!-- Insert vscode-extension image here  -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Windows Git Installation
+### Connect to GitHub
 
-For any application you open and edit on your computer, that is a local file. Any application that is stored on your GitHub account is your remote copy. 
+To push your local work to GitHub, your computer needs to be authenticated with your account.
 
-To push your local version to your remote copy or make changes to the remote copy, you need to have a connection from your terminal to your GitHub account. 
+1. **In VS Code:** click the **Accounts** icon in the bottom left corner and choose **Sign in with GitHub**. This lets VS Code's Source Control panel work with your repositories.
 
-On the bottom left corner of VS Code is a profile that can manage extensions. Let's connect your VS Code to GitHub and add version control. 
+   <!-- insert auth-prompt image -->
 
-1. Create a GitHub account
-
-2. Download git to your computer. 
-
-Install here: [git](https://git-scm.com/install/windows)
-
-3. Open VS Code and sign in to your GitHub account in 'Source Control' on the left vertical navigation bar.
-
-4. Set your configuration to identify the user in commits:
+2. **In the terminal:** signing in through VS Code may not cover `git push` from the terminal. Use one of these:
+   - **Windows:** Git Credential Manager is included with Git for Windows. The first time you push, a browser window opens for you to sign in.
+   - **Mac (or any system):** install the GitHub CLI and log in:
 
 ```sh
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
+     brew install gh
+     gh auth login
 ```
 
+Follow the prompts and choose HTTPS when asked for a protocol.
+
+
+For **Next Steps** on creating, pushing, and pull GitHub repositories, go to github_guide.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- how to install extensions for different languages -->
-
-<!-- using javascript -->
-
-<!-- using python -->
