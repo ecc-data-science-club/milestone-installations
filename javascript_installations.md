@@ -1,4 +1,8 @@
-## Terminal Installations for using JavaScript
+<a id="readme-top"></a>
+
+# Terminal Installations for using JavaScript
+
+There are **Mac** and **Windows** sections for OS specific instructions and shared sections.
 
 ## Mac
 
