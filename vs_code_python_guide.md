@@ -1,6 +1,8 @@
+<a id="readme-top"></a>
+
 # Installing Python extension and libraries for Data Science in Visual Studio Code
 
-This guide assumes Python 3 and VS Code are already installed.
+This guide assumes Python 3 and VS Code are already installed and that you have already completed the `vs_code_installations.md` guide. 
 
 1. Install extensions:
 Navigate to the extensions on the side bar (Ctrl+shift+X on Windows/Linux and cmd+Shift+X on Mac) and install:
@@ -101,5 +103,5 @@ import pandas as pd
 print(pd.__version__)
 ```
 
-Setup was successfulif a version number is returned. 
+Setup was successful if a version number is returned. 
 

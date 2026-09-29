@@ -1,11 +1,15 @@
-
+<a id="readme-top"></a>
 <!-- terminal information -->
+
+**Start Here**
 
 # **About the Terminal**
 
 Mac uses a Unix-based shell environment, bash and zsh, and Windows uses a native environment called Command Prompt or PowerShell.
 
 These environments are called terminals and they allow us to run and install programs. This guide will tell you where to find the terminals, how to install the package managers, and the general shortcut keys for using the terminal.
+
+There are **Mac** and **Windows** sections for OS specific instructions and shared sections.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,16 +94,20 @@ winget --version
 
 From here, go to the next installation guide depending on what type of coding you want to do.
 
-1. Anaconda is a python package ('distribution') that includes the data science libraries and the Python programming language and interpreter, but does not have a built-in IDE. Instead, it supports IDEs like Jupyter Notebook/JupyterLab, VS Code, and spyder. 
+1. **Anaconda** is a python package ('distribution') that includes the data science libraries and the Python programming language and interpreter, but does not have a built-in IDE. Instead, it supports IDEs like Jupyter Notebook/JupyterLab, VS Code, and spyder. 
 - Python specific.
 - Must be run with a 3rd party IDE. i recommend Jupyter Notebook or VS Code.
-2. Visual Studio Code is the Microsoft code editor that works with many different languages with extensions and installations. In other words, it is not an IDE, but mimics one with extensions. 
+- Go to `anaconda_installations.md`.
+2. **Visual Studio Code** is the Microsoft code editor that works with many different languages with extensions and installations. In other words, it is not an IDE, but mimics one with extensions. 
 - Works with the most languages and designed for web development. Also does Data Science well and is a lightweight version of Visual Studio.
 - Supports Windows, MacOS, and Linux.
 - Programming languages: Python, JavaScript, C, C++, C#, Go, Dart, R, Rust, Swift, TypeScript, Java, HTML, and more.
-3. Visual Studio (Microsoft compatible only) is the Microsoft IDE which means it has the most robust compiler and diagnostic tools.
+- VS Code can also use the **Anaconda** package. 
+- Go to `vs_code_installations.md` and `vs_code_python_guide.md`.
+3. **Visual Studio** (Microsoft compatible only) is the Microsoft IDE which means it has the most robust compiler and diagnostic tools.
 - Can handle intense and large apps, including unity game development. 
 - Only supported on Windows.
+- Guide not included. 
 
 
 ## Useful General Computer commands

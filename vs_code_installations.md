@@ -1,7 +1,9 @@
+<a id="readme-top"></a>
 # Visual Studio Code and Git
 
-This guide assumes that you have done the installations from terminal_installations.md and have chosen to code using the VS Code editor. 
+This guide assumes that you have done the installations from `terminal_installations.md` and have chosen to code using the VS Code editor. 
 
+There are **Mac** and **Windows** sections for OS specific instructions and shared sections.
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -27,9 +29,7 @@ This guide assumes that you have done the installations from terminal_installati
   </ol>
 </details>
 
-
 ## Install VS Code
-
 
 ### Mac Installation
 
@@ -88,14 +88,14 @@ This installer adds 'code' by default.
 
 
 ### What is version control and why is it important?
-Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It can be used to track changes, revert to a version before a bug developed and see who last edited a block of code. 
+**Version control** is a system that records changes to a file or set of files over time so that you can recall specific versions later. It can be used to track changes, revert to a version before a bug developed and see who last edited a block of code. 
 
 Git is a version control system that works with [Visual Studio Code](https://code.visualstudio.com/) and [Anaconda](https://www.anaconda.com/download) and uses the terminal to run those commands. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### What is GitHub and why is it important?
-GitHub is a cloud-based hosting service for Git repositories. While Git is the local tool that tracks your code history on your machine, GitHub lets you store that history remotely, collaborate with others, share projects, and back up your work.
+**GitHub** is a cloud-based hosting service for Git repositories. While Git is the local tool that tracks your code history on your machine, GitHub lets you store that history remotely, collaborate with others, share projects, and back up your work.
 
 For the moment, unless you want to create your own website, GitHub is the best way to host your portfolio projects. It also makes it very easy for people to be able to clone and test your code themselves. 
 
@@ -103,7 +103,7 @@ For the moment, unless you want to create your own website, GitHub is the best w
 
 ## Install Git
 
-First, create a free account at [github.com](https://github.com/).
+First, create a free account at [github.com](https://github.com/). Use a professional username, preferably as close to your real name as possible since it appears in your profile URL and your repository links.
 
 ### Mac Installation
 
