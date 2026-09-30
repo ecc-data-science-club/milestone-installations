@@ -22,6 +22,7 @@ This guide assumes you have completed `terminal_installations.md`. There are **M
     <li><a href="#use-anaconda-in-vs-code">Use Anaconda in VS Code</a></li>
     <li><a href="#jupyter-and-anaconda-navigator">Jupyter and Anaconda Navigator</a></li>
     <li><a href="#share-your-environment">Share your environment</a></li>
+    <li><a href="#use-git-with-your-anaconda-project">Use Git with your Anaconda Project</a></li>
     <li><a href="#common-conda-commands">Common conda commands</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
   </ol>
@@ -217,6 +218,53 @@ conda env create -f environment.yml
 ```
 
 Commit `environment.yml` to Git. Don't commit the environment folder itself.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Use Git with your Anaconda project
+
+**Git** tracks the history of your project on your computer so you can go back to earlier versions. Git is not included with Anaconda, so this section covers setting it up. You don't need `conda install git`. Use one copy of Git installed on your computer.
+
+### Install Git
+
+**Mac**
+
+Check whether Git is already installed:
+
+```sh
+git --version
+```
+
+Install it with Homebrew:
+
+```sh
+brew install git
+```
+
+**Windows**
+
+Install it with winget: 
+
+```powershell
+winget install Git.Git
+```
+
+Or download it from [git-scm.com](https://git-scm.com/). Close and reopen PowerShell, then verify:
+
+```powershell
+git --version
+```
+
+
+### Configure Git
+
+Tell Git who you are. This information is attached to every commit:
+
+```sh
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+git config --global init.defaultBranch main
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
