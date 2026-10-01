@@ -22,8 +22,10 @@ There are **Mac** and **Windows** sections for OS specific instructions and shar
     </li>
     <li><a href="#create-a-repository-and-clone-it">Create a repository and clone it</a></li>
     <li><a href="#everyday-workflow">Everyday workflow</a></li>
+    <li><a href="#creating-your-remote-repository">Creating your remote repository</a></li>
     <li><a href="#branches-and-pull-requests">Branches and pull requests</a></li>
     <li><a href="#forks-and-contributing">Forks and contributing</a></li>
+    <li><a href="#changing-your-remote-origin">Changing your remote origin</a></li>
     <li><a href="#data-science-repository-tips">Data science repository tips</a></li>
     <li><a href="#build-your-portfolio">Build your portfolio</a></li>
     <li><a href="#undo-mistakes">Undo mistakes</a></li>
@@ -32,6 +34,7 @@ There are **Mac** and **Windows** sections for OS specific instructions and shar
     <li><a href="#troubleshooting">Troubleshooting</a></li>
   </ol>
 </details>
+
 
 ## What GitHub adds to Git
 
@@ -155,6 +158,38 @@ Tips for good commits:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Creating your remote repository
+
+### Create a new local repository for a new remote repository
+
+Are you making a new repository from scratch and setting up the github remote at the same time? Do this workflow.
+
+```sh
+git init
+git add README.md
+git commit -m "Commit message that becomes the title for the pull request"
+git branch -M main
+git remote add origin remote-path.git
+git push -u origin main
+```
+
+
+### Push an existing repository to a new remote repository
+
+Do you already have a project and are just setting up the github remote? Do this workflow.
+
+```sh
+git remote add origin remote-path.git
+git switch -c branch-name
+git add file-name
+git commit -m "commit message"
+git push -u origin branch-name
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## Branches and pull requests
 
 A **branch** is a separate line of work, so you can experiment without touching the working version on `main`. A **pull request** (PR) asks to merge your branch into `main`.
@@ -218,6 +253,18 @@ git pull upstream main
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Changing your remote origin
+
+If you need to change your remote location, you can set a new url for the remote:
+
+```sh
+git remote set-url origin new-path.git
+```
+
+I suggest getting the new path from the code button on the repository. 
+
 
 ## Data science repository tips
 
